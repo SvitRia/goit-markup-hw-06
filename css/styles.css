@@ -229,9 +229,6 @@ label {
     color: var(--btn-color-okean);
 } 
 
- {
-   
-}
 
 .active::after {
     color: var(--btn-color-okean);
@@ -286,11 +283,9 @@ label {
 .button {
 
     display: block;
-    flex-direction: row;
-    align-items: center;
     padding: 16px 32px;
     margin: 0px auto;
-    gap: 10px;
+
     min-width: 169px;
     height: 56px;
     border: none;
@@ -703,7 +698,7 @@ label {
 .modal {
     position: absolute;
     width: 408px;
-    min-height: 576px;
+    min-height: 584px;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -750,6 +745,8 @@ label {
 
 .modal-text {
     text-align: center;
+    font-weight: 500;
+    
 }
 .modal-form {
     display: flex;
@@ -759,6 +756,9 @@ label {
 
 .modal-label {
   
+   font-size: 12px;
+   height: 18px;
+   color: var(--helper-text);
    }
  
 .modal-input {
@@ -787,22 +787,33 @@ label {
     bottom: 8px;
  }
 
-.comment {
-   display: flex;
-   flex-direction: column;
-    height: auto;
+.input-comment {
+    display: flex;
+    flex-direction: column;
+   
+    height: 138px;
     margin-bottom: 16px;
 
 }
-.input-comment {
-    
+
+.textarea {
+    margin-top: 4px;
+    padding: 8px 16px;
+    height: 120px;
+    resize: none;
+    color: var(--backgraund-dark);
+    border: 1px solid var(--leinercoolor);
+    border-radius: 4px;  
+}
+.textarea:focus {
+    outline: 1px solid var(--btn-color-iris);
 }
 
 .modal-agreement {
     position: relative;
     display: flex;
     gap: 8px;
-   justify-content: center;
+  
    align-items: center;
 }
 .input-agry {
@@ -837,19 +848,9 @@ label {
    
 }
 
-.textarea:focus {
-    outline: 1px solid var(--btn-color-iris);
-}
-.textarea {
-    padding: 8px 0ppx;
-    height: 120px;
-    resize: none;
-    color: var(--backgraund-dark);
-    border: 1px solid var(--leinercoolor);
-    border-radius: 4px;  
-}
 .button-send {
-    margin-top: 24px;
+    margin: 24px auto;
+
 }
 
 /*-----portfolio-----*/
