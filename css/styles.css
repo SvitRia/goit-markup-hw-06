@@ -621,24 +621,27 @@ label {
 .subscribe {
   
 }
+
+.input-email {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    position: relative;
+}
+
+.footer-input {
+    display: block; 
+    position: relative;   
+}
+
 .email-holder {
     position: absolute;
     top: 8px;
     left: 16px;
     font-size: 12px;
     line-height: 24px;
-    color: var(--white-color);
-    
-}
-    
-
-.footer-input {
-    position: relative;
-    flex-direction: column;
-}
-
-.footer-input:focus + .email-holder {
-    transform: translateY(-100%) scale(0.8);
+    color: var(--white-color);  
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .footer-email {
@@ -650,12 +653,20 @@ label {
     border-radius: 4px;
     background-color: transparent;
     color: var(--white-color);
+    transform-origin: left center;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+
+.footer-email:focus + .email-holder,
+.footer-email:not(:placeholder-shown) + .email-holder {
+    transform: translateY(-50%) scale(0.8);
+    opacity: 0.5;
 }
 
-.input-email {
-    display: flex;
-    gap: 24px;
-}
+
+
+
 .btn-subscribe {
     display: flex;
     flex-direction: row;
@@ -765,6 +776,7 @@ label {
     border: 1px solid var(--leinercoolor);
     border-radius: 4px;  
     outline: transparent;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-icon {
@@ -822,7 +834,7 @@ label {
     
     border-color: var(--btn-color-iris);
     fill: var(--btn-color-iris);
-    transition: outline 250ms;
+   
 }
 
 .textarea:focus {
